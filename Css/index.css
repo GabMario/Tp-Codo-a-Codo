@@ -39,6 +39,7 @@ header img {
 }
 
 .titulo {
+    margin-top: 1em;
     width: 30%;
     display: flex;
     justify-content: center;
@@ -383,6 +384,10 @@ footer ul li{
     .accionesNav ,
     .menuDesplegable {
         order: 2;
+    }
+
+    .carousel {
+        margin: 7em auto 1em auto;
     }
 
     .prev, .next{
