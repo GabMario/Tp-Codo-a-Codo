@@ -13,7 +13,7 @@ header {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    background-color: black;
+    background-color: rgba(17,17,17,255);
     height: 4.5em;
     width: 100%;
     flex-flow: column nowrap;
@@ -28,7 +28,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: black;
+    background-color: rgba(17,17,17,255);
     height: 4.5em;
     width: 100%;
     flex-flow: row nowrap;
