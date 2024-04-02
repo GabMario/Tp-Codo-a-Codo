@@ -15,7 +15,16 @@ header {
     align-items: center;
     background-color: black;
     height: 4.5em;
+    width: 100%;
     flex-flow: row nowrap;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+header img {
+    width: 3em;
 }
 
 .titulo {
@@ -77,20 +86,23 @@ h1 {
     margin: 0 0.2em;
 }
 
-.navegacion li ,button{
+.navegacion li ,.navegacion button{
     list-style: none;
-    cursor: pointer;
+    
 }
+
 
 .navegacion li a:hover, button:hover {
     color: rgb(233, 194, 143);
+    cursor: pointer;
 }
 
 .carousel {
     position: relative;
     width: 75%;
     max-width: 120em;
-    margin: 1em auto;
+    max-height: 53em;
+    margin: 5em auto 1em auto;
     overflow: hidden;
 }
 
@@ -115,10 +127,16 @@ h1 {
     box-sizing: border-box;
 }
 
-.prev {
-    height: 90%;
+.controls {
     position: absolute;
-    top: 5%;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.prev {
+    height: 100%;
+    position: absolute;
     background: transparent;
     border: none;
     color: rgba(0, 0, 0, 0.507);
@@ -127,17 +145,98 @@ h1 {
     left: 0.1em;
 }
 .next{
-    height: 90%;
+    height: 100%;
     position: absolute;
-    top: 5%;
-    background: transparent;
     border: none;
     color: rgba(0, 0, 0, 0.507);
     font-size: 2em;
     cursor: pointer;
-    right: -1em;
+    right: -1.1em;
 }
 
+.separar {
+    background-color: rgba(14, 14, 14, 0.534);
+    color: aliceblue;
+    text-align: center;
+    font-size: 1.3em;
+    margin: 1em 0;
+  }
+
+.secciones {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+
+.secciones a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+.secciones h2 {
+    display: block;
+    font-size: 4em;
+    position: relative; 
+    z-index: 1
+}
+
+.difuminado:hover {
+    display: block;
+    opacity: 1;
+    background-color: rgba(13, 14, 14, 0.473); 
+}
+
+.difuminado {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(13, 14, 14, 0.11); 
+}
+
+.seccion1 {
+    background-image: url(../Img/electro.jpg);
+    background-size: cover; /* Esto hace que la imagen de fondo cubra todo el contenedor */
+    background-position: center; 
+    margin: 0.635em 0.3125em;
+    backdrop-filter: blur(5px); 
+}
+
+.seccion2 {
+    background-image: url(../Img/mueble.jpg);
+    background-size: cover; /* Esto hace que la imagen de fondo cubra todo el contenedor */
+    background-position: center; 
+    margin: 0.635em 0.3125em;
+    backdrop-filter: blur(5px); 
+}
+
+.seccion3 {
+    background-image: url(../Img/ropa.jpg);
+    background-size: cover; /* Esto hace que la imagen de fondo cubra todo el contenedor */
+    background-position: center; 
+    margin: 0.635em 0.3125em;
+    backdrop-filter: blur(5px); 
+}
+
+.seccion4 {
+    background-image: url(../Img/herramientas-manuales-basicas-02-2022-07.jpg);
+    background-size: cover; /* Esto hace que la imagen de fondo cubra todo el contenedor */
+    background-position: center; 
+    margin: 0.635em 0.3125em;
+    backdrop-filter: blur(5px); 
+}
+
+.seccion1, .seccion2, .seccion3, .seccion4 {
+    width: 43.75em;
+    height: 25em;
+    position: relative; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+}
 
 .muestra {
     display: flex;
@@ -154,12 +253,47 @@ h1 {
 
 footer {
     background-color: black;
-    height: 2em;
+    height: auto;
+    margin-top: 1.5em;
+    color: aliceblue;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 1.5em;
 }
+
+footer ul{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.direccion{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.redes {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0.5em;
+}
+
+footer ul li{
+    text-align: center;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+}
+
+@media only screen and (max-width: 1500px) {
+    .secciones {
+        flex-direction: column;
+    }
+} 
 
 @media only screen and (max-width: 1180px) {
     .muestra img {
@@ -175,17 +309,6 @@ footer {
     }
 } 
 
-@media only screen and (max-width: 869px) {
-    .muestra img {
-        width: calc( 100% - 1em);
-        margin: 0.3em 0.5em;
-    }
-
-    .prev, .next{
-        font-size: 1.8em;
-    }
-} 
-
 @media only screen and (max-width: 1000px) {
 
     header{
@@ -195,13 +318,12 @@ footer {
         order: 1;
     }
 
-    .titulo {
-        width: 20%;
- 
+    header img{
+        width: 4em;
     }
 
-    h1 {
-        font-size: 2em;
+    .titulo h1{
+        display: none;
     }
 
     .menuDesplegable {
@@ -255,5 +377,27 @@ footer {
 
     header nav{
         flex-flow: row nowrap;
+    }
+} 
+
+@media only screen and (max-width: 869px) {
+    .muestra img {
+        width: calc( 100% - 1em);
+        margin: 0.3em 0.5em;
+    }
+
+    .prev, .next{
+        font-size: 1.8em;
+    }
+    .seccion1, .seccion2, .seccion3, .seccion4 {
+        width: 33.75em;
+        height: 18em;
+    }
+} 
+
+@media only screen and (max-width: 600px) {
+    .seccion1, .seccion2, .seccion3, .seccion4 {
+        width: 26.5em;
+        height: 16em;
     }
 } 
