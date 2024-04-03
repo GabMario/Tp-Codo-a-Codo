@@ -11,11 +11,19 @@ document.addEventListener("DOMContentLoaded", function() {
   const botonBusqueda = document.querySelector(".buscarBoton");
   const barraDeBusqueda = document.querySelector(".barraDeBusqueda");
   const liBusqueda = document.querySelector(".libuscando")
+  const cerrar = document.querySelector(".close")
 
   botonBusqueda.addEventListener("click", () => {
-    barraDeBusqueda.classList.toggle("buscando");
-    liBusqueda.classList.toggle("buscando");
-    botonBusqueda.classList.toggle("buscando");
+    barraDeBusqueda.classList.add("buscando");
+    liBusqueda.classList.add("buscando");
+    botonBusqueda.classList.add("buscando");
+    cerrar.classList.add("buscando");
+  });
+  cerrar.addEventListener("click", () => {
+    barraDeBusqueda.classList.remove("buscando");
+    liBusqueda.classList.remove("buscando");
+    botonBusqueda.classList.remove("buscando");
+    cerrar.classList.remove("buscando");
   });
 });
 

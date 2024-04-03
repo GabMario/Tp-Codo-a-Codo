@@ -14,7 +14,7 @@ header {
     justify-content: space-evenly;
     align-items: center;
     background-color: rgba(17,17,17,255);
-    height: 4.5em;
+    height: 6.5em;
     width: 100%;
     flex-flow: column nowrap;
     position: fixed;
@@ -91,8 +91,32 @@ h1 {
     flex-flow: row nowrap;
     background-color: rgb(226, 224, 222);
     padding: 0.5em;
-    border-radius: 1em;
-    margin: 0 1.3em;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    height: 6.5em;
+}
+
+.libuscando input {
+    width: 55%;
+}
+
+.close {
+    display: none;
+}
+
+.close.buscando {
+    display: block;
+    font-size: 1.5em;
+    position: absolute;
+    right: 1em;
+    width: 10%;
+}
+
+.buscarBoton {
+    font-size: 1.2em;
 }
 
 .barraDeBusqueda{
@@ -127,7 +151,7 @@ h1 {
     width: 75%;
     max-width: 120em;
     max-height: 53em;
-    margin: 5em auto 1em auto;
+    margin: 7em auto 1em auto;
     overflow: hidden;
 }
 
@@ -319,6 +343,10 @@ footer ul li{
     .secciones {
         flex-direction: column;
     }
+    .seccion1, .seccion2, .seccion3, .seccion4 {
+        width: 43.75em;
+        height: 23.5em;
+    }
 } 
 
 @media only screen and (max-width: 1180px) {
@@ -345,10 +373,11 @@ footer ul li{
     }
 
     header img{
-        width: 4em;
+        width: 4.7em;
     }
 
     .titulo {
+        width: 60%;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -405,11 +434,11 @@ footer ul li{
     }
 
     .libuscando.buscando{
-        width: 70%;
         order: 3;
     }
-    .barraDeBusqueda.buscando{
-        width: 90%;
+
+    .libuscando input {
+        width: 50%;
     }
 
     header nav{
@@ -428,7 +457,7 @@ footer ul li{
     }
     .seccion1, .seccion2, .seccion3, .seccion4 {
         width: 33.75em;
-        height: 18em;
+        height: 20em;
     }
 } 
 
