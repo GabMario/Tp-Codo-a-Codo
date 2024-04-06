@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/favicon_tVt.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/e3d7a282b0.js" crossorigin="anonymous"></script>
+    <title>Contacto Te vendo Todo</title>
+</head>
+
+<body>
+    <header>
+        <nav class="top">
+            <section class="titulo">
+                <img src="Img/logo.jpeg" alt="">
+                <h1>Te Vendo Todo</h1>
+            </section>
+            <nav class="libuscando">
+                <input type="text" placeholder="Buscar..." class="barraDeBusqueda">
+                <button class="buscarBoton"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </nav>
+            <nav class="accionesNav">
+                <ul class="navegacion icono">
+                    <li><a href=""><i class="fa-solid fa-user"></i></a></li>
+                    <li><a href=""><i class="fa-solid fa-cart-shopping"></i></a></li>
+                </ul>
+            </nav>
+            <button class="menuDesplegable">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </nav>
+        <nav class="linksNav">
+            <ul class="navegacion info">
+                <li><a href="">Inicio</a></li>
+                <li><a href="">Sobre Nosotros</a></li>
+                <li><a href="">Productos</a></li>
+                <li><a href="">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="consultas">
+            <h2>Consultas</h2>
+            <p>Escribe tu consulta sin olvidar <strong>tu e-mail </strong> para que te respondamos!!!</p>
+            <form action="#" id="formconsulta" method="GET" novalidate>
+                <textarea name="consultas" id="consultas" cols="60"
+                    rows="5">Aquí, escribe aquí tus consultas!!!</textarea>
+                <button type="submit">Envía la consulta presionando aquí</button>
+
+                <p>Puede hacerlo tanbíen por WhatsApp.</p>
+                <a href="https://api.whatsapp.com/send/?phone=5491155945330&amp;text=Hola!%20Quiero%20contactarme%20con%20te%20Vendo%20todo%20"
+                    target="_blank" title="Escribinos al WhatsApp!" class="whatsapp">
+                    <p>WhatsApp: <i class="fa-brands fa-whatsapp fa-bounce fa-2xl" style="color: #149600;"></i></p>
+                </a>
+
+        </section>
+        <section class="registro">
+            <h2>Tus datos</h2>
+            <form action="#" id="formregistro" method="GET" novalidate>
+                <fieldset>
+                    <legend>¡Datos mínimos que te pedimos!</legend>
+                    <div class="form-control">
+                        <label for="">Nombre:</label>
+                        <input type="text" name="nombre" id="nombre" placeholder="Anacleto" required>
+                    </div>
+                    <div class="error" id="error-nombre"></div>
+                    <div class="form-control">
+                        <label>Apellido:</label>
+                        <input type="text" name="apellido" id="apellido" placeholder="ElPollo" required>
+                    </div>
+                    <div class="error" id="error-apellido"></div>
+                    <div class="form-control">
+                        <label id="label-anionacimiento">Año de Nacimiento:</label>
+                        <input type="number" name="anionacimiento" id="anionacimiento" min="1920" max="2040"
+                            maxlength="4" required value="1980">
+                    </div>
+                    <div class="error" id="error-anionacimiento"></div>
+                    <div class="form-control">
+                        <label>Contraseña:</label>
+                        <input type="password" name="password" id="password" required>
+                    </div>
+                    <div class="error" id="error-password"></div>
+                    <div class="form-control">
+                        <label>Email:</label>
+                        <input type="email" name="email" id="email" placeholder="anacletoelpollo@ejemplo.com" required>
+                    </div>
+                    <div class="error" id="error-email"></div>
+                    <div class="form-control">
+                        <select name="rubrosinteres" id="rubrosinteres" class="form-select">
+                            <option value="">Rubros de Interés</option>
+                            <option value="MU">Muebles</option>
+                            <option value="ELC">Electrodomésticos</option>
+                            <option value="HR">Herramientas</option>
+                            <option value="RO">Ropa</option>
+                            <option value="OT">Otros</option>
+                        </select>
+                    </div>
+
+                    <div class="form-terms">
+                        <div class="terms">
+                            <input type="checkbox" id="terms">
+                            <label for="terms">Acepto términos y condiciones</label>
+                        </div>
+
+                    </div>
+                    <div class="input">
+                        <button type="submit">Registrate</button>
+                        <input type="reset" value="Reseteo">
+                    </div>
+
+                </fieldset>
+            </form>
+        </section>
+        <section class="ayuda">
+            <div class="form-help">
+                <a href="#">¿Necesitas ayuda?</a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <nav>
+            <ul class="navegacion">
+                <li>
+                    <ul class="direccion">
+                        <li>
+                            <h3>Direccion</h3>
+                        </li>
+                        <li>
+                            <h3>..................</h3>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <ul class="redes">
+                        <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
+                        <li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
+                        <li><a href="">whatsApp</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <h4>Derechos de autor para codoacodo</h4>
+                </li>
+            </ul>
+        </nav>
+    </footer>
+
+</html>
